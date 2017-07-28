@@ -1,0 +1,35 @@
+{
+  "name": "pinterest",
+  "version": "1.0.0",
+  "description": "Proyecto final sprint 6",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanegarciay/pinterest.git"
+  },
+  "author": "Vanessa Garcia Yara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanegarciay/pinterest/issues"
+  },
+  "homepage": "https://github.com/vanegarciay/pinterest#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^2.10.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "materialize-css": "^0.100.1"
+  }
+}
