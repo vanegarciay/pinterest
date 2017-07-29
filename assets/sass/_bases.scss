@@ -1,0 +1,56 @@
+.navbar {
+    color: $main-color;
+    background: white;
+
+    a {
+        color: $main-color;
+    }
+
+    &__logo {
+        font-size: 1em;
+    }
+
+    &__logo img {
+        width: 40%;
+        max-width: 40px;
+        margin-bottom: -12%;
+        margin-right: 8px;
+    }
+
+    &__busqueda {
+        i {
+            color: $main-color !important;
+        }
+    }
+
+    .navbar__cerrar-busqueda {
+        top: -7px !important;
+    }
+}
+
+.nav-wrapper .input-field input[type=search] {
+    background: #EFEFEF;
+    border-radius: 6px;
+    height: 3em;
+    margin-top: 0.8em;
+}
+
+.nav-wrapper .input-field input[type=search]+label {
+    top: -17px;
+}
+
+.pines {
+    &__single {
+        margin: 2%;
+    }
+
+    &__single img {
+        width: 100%;
+        border-radius: 1em;
+    }
+
+    &__single h4 {
+        font-weight: bold;
+        font-size: 1.8em;
+    }
+}

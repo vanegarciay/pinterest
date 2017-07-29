@@ -1,4 +1,4 @@
-#PINTEREST
+# PINTEREST
 
 # Requerimientos Técnicos
 

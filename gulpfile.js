@@ -22,7 +22,7 @@ gulp.task('style', function(){
 });
 
 gulp.task('webserver', function(){
-    gulp.src('docs/img/')
+    gulp.src('../pinterest/')
     .pipe(webserver({
         fallback: 'index.html',
         livereload: true,
