@@ -49,8 +49,27 @@
         border-radius: 1em;
     }
 
-    &__single h4 {
+    &__title {
         font-weight: bold;
-        font-size: 1.8em;
+        font-size: 1.3em;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    &__subtitle, &__user, &__hashtag {
+        font-family: $quicksand-typografy;
+        font-size: 0.9em;
+        margin: 2px;
+        padding: 2px;
+    }
+
+    &__user {
+        font-weight: bold;
+    }
+
+    &__hashtag {
+        font-style: italic;
+        color: darkred;
+        padding-bottom: 1em;
+        font-weight: bold;
     }
 }

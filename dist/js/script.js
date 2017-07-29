@@ -20261,9 +20261,10 @@ $(document).ready(function() {
     $.each(dataPinterest, function(i, item) {
         $(".pines-"+pin_col_counter).append(
             '<div class="pines__single"><img class="responsive-img" src="docs/img/'+item.image_url+'">' +
-            '<h4>'+item.title+'</h4>' +
-            '<p>'+item.description+'</p>' +
-            '<p>'+item.user+' '+item.username+'</p></div>'
+            '<h4 class="pines__title">'+item.title+'</h4>' +
+            '<p class="pines__subtitle">'+item.description+'</p>' +
+            '<p class="pines__user">'+item.user+' @'+item.username+'</p>'+
+            '<p class="pines__hashtag">#'+item.hashtag+'</p></div>'
         );
         
         if(pin_col_counter == 6) {
