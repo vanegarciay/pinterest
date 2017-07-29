@@ -13,7 +13,7 @@
     &__logo img {
         width: 40%;
         max-width: 40px;
-        margin-bottom: -12%;
+        margin-bottom: -8%;
         margin-right: 8px;
     }
 
@@ -21,6 +21,12 @@
         i {
             color: $main-color !important;
         }
+    }
+
+    &__avatar {
+        width: 40%;
+        max-width: 40px;
+        margin-bottom: -5%;
     }
 
     .navbar__cerrar-busqueda {
