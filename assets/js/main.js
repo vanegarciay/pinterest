@@ -18,14 +18,14 @@ $(document).ready(function() {
 
     function cargaPinesEnHtml(){
         var arrayDeImagenes = dataPinterest.slice(ultimaImgCargada, ultimaImgCargada+20);
-        
+
         $.each(arrayDeImagenes, function(i, item) {
             ultimaImgCargada = item.id;
 
             $(".pines-"+pin_col_counter).append(
                 '<div class="pines__single hoverable">' +
                     '<a class="pines__link modal-trigger" href="#modal-pin">' +
-                        '<img class="responsive-img" src="dist/css/img/'+item.image_url+'">' +
+                        '<img class="responsive-img imagen" src="dist/css/img/'+item.image_url+'">' +
                         '<h4 class="pines__title">'+item.title+'</h4>' +
                         '<p class="pines__subtitle">'+item.description+'</p>' +
                         '<p class="pines__user">'+item.user+' @'+item.username+'</p>'+
@@ -53,6 +53,21 @@ $(document).ready(function() {
         if ((scrollDesdeElInicio + altoDeVentana) == altoDelDocumentoCompleto){
             cargaPinesEnHtml();
         }
+    });
+
+    $(".pines").on("click", ".pines__single", function(event) {
+        var imagen = $(this).find(".imagen").attr("src");
+        var tituloImagen = $(this).find(".pines__title").text();
+        var descripcion = $(this).find(".pines__subtitle").text();
+        var usuario = $(this).find(".pines__user").text();
+        var hashtag = $(this).find(".pines__hashtag").text();
+
+        $(".modal-img").attr("src", imagen);
+        $(".modal-img-link").attr("href", imagen);
+        $(".modal-content__title").text(tituloImagen);
+        $(".modal .pines__user").text(usuario);
+        $(".modal .pines__hashtag").text(hashtag);
+        $(".modal-content__description").text(descripcion);
     });
 });
 
