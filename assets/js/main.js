@@ -69,5 +69,9 @@ $(document).ready(function() {
         $(".modal .pines__hashtag").text(hashtag);
         $(".modal-content__description").text(descripcion);
     });
+
+    $(".navbar__bars").click(function(event) {
+        $(".navbar__menu").sideNav();
+    });
 });
 
