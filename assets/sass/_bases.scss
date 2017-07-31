@@ -83,6 +83,20 @@ body, a {
     top: -17px;
 }
 
+@for $i from 1 through 8 {
+    $background: url("../css/img/#{$i}.jpg");
+
+    .btn-#{$i} {
+        background: $background;
+        border-radius: 0.6em;
+        font-weight: bold;
+        text-shadow: 0 0 0.5em #000;
+        box-shadow: inset 0 0 6em #333;
+        -webkit-filter: sepia(50%);
+        filter: sepia(50%);
+    }
+}
+
 .pines {
     &__single {
         margin: 2%;
