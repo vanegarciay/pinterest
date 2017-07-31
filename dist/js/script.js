@@ -20257,8 +20257,8 @@ var dataPinterest = [{"id":1,"title":"Fuke zisukje bu dibas sik.","description":
 
 $(document).ready(function() {
     var pin_col_counter = 1;
+    var ultimaImgCargada = 0;
 
-    console.log("antes");
     $('.modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
         opacity: .5, // Opacity of modal background
@@ -20272,26 +20272,43 @@ $(document).ready(function() {
         complete: function() {
         } // Callback for Modal close
     });
-    console.log("despues");
 
-    $.each(dataPinterest, function(i, item) {
-        $(".pines-"+pin_col_counter).append(
-            '<div class="pines__single hoverable">' +
-                '<a class="pines__link modal-trigger" href="#modal-pin">' +
-                    '<img class="responsive-img" src="docs/img/'+item.image_url+'">' +
-                    '<h4 class="pines__title">'+item.title+'</h4>' +
-                    '<p class="pines__subtitle">'+item.description+'</p>' +
-                    '<p class="pines__user">'+item.user+' @'+item.username+'</p>'+
-                    '<p class="pines__hashtag">#'+item.hashtag+'</p>' +
-                '</a>' +
-            '</div>'
+    function cargaPinesEnHtml(){
+        console.log(dataPinterest.slice(ultimaImgCargada, ultimaImgCargada+20));
+        $.each(dataPinterest.slice(ultimaImgCargada, ultimaImgCargada+20), function(i, item) {
+            ultimaImgCargada = item.id;
+            console.log(ultimaImgCargada);
+
+            $(".pines-"+pin_col_counter).append(
+                '<div class="pines__single hoverable">' +
+                    '<a class="pines__link modal-trigger" href="#modal-pin">' +
+                        '<img class="responsive-img" src="dist/css/img/'+item.image_url+'">' +
+                        '<h4 class="pines__title">'+item.title+'</h4>' +
+                        '<p class="pines__subtitle">'+item.description+'</p>' +
+                        '<p class="pines__user">'+item.user+' @'+item.username+'</p>'+
+                        '<p class="pines__hashtag">#'+item.hashtag+'</p>' +
+                    '</a>' +
+                '</div>'
+                
+            );
             
-        );
-        
-        if(pin_col_counter == 6) {
-            pin_col_counter = 1;
-        } else {
-            pin_col_counter++;
+            if(pin_col_counter == 6) {
+                pin_col_counter = 1;
+            } else {
+                pin_col_counter++;
+            }
+        });
+    }
+
+    cargaPinesEnHtml();
+
+    $(window).scroll(function(){
+        var scrollDesdeElInicio = $(window).scrollTop();
+        var altoDeVentana = $(window).height();
+        var altoDelDocumentoCompleto = $(document).height();
+
+        if ((scrollDesdeElInicio + altoDeVentana) == altoDelDocumentoCompleto){
+            cargaPinesEnHtml();
         }
     });
 });
