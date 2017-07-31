@@ -17,24 +17,31 @@
     </ul>
     <nav class="navbar nav-wrapper row">
         <div class="row">
-            <div class="col m12 s12">
-                <div class="col m2 s2">
-                    <a href="#!" class="navbar__logo"><img src="dist/css/img/logo_pinterest.png"><span class="hide-on-small-only">Inicio</span></a>
-                </div>
-                <div class="col m5 s5">
-                    <div class="navbar__busqueda input-field">
-                        <input class="navbar__campo-busqueda" id="search" type="search" placeholder="Buscar" required>
-                        <label class="navbar__label-busqueda label-icon" for="search"><i class="navbar__icono-busqueda material-icons">search</i></label>
-                        <i class="navbar__cerrar-busqueda material-icons">close</i>
+            <div class="col l12 m12 s12">
+                <div class="col l9 m9 s8">
+                    <div class="col l2 m3 s3">
+                        <a href="#!" class="navbar__logo"><img src="dist/css/img/logo_pinterest.png"><span class="hide-on-small-only">Inicio</span></a>
+                    </div>
+                    <div class="col l7 m5 s9">
+                        <div class="navbar__busqueda input-field">
+                            <input class="navbar__campo-busqueda" id="search" type="search" placeholder="Buscar" required>
+                            <label class="navbar__label-busqueda label-icon" for="search"><i class="navbar__icono-busqueda material-icons">search</i></label>
+                            <i class="navbar__cerrar-busqueda material-icons">close</i>
+                        </div>
+                    </div>
+                    <div class="col l3 m4 s4 hide-on-small-only no-padding no-margin">
+                        <ul id="nav-mobile no-padding no-margin">
+                            <li><a class="dropdown-button no-padding no-margin" href="#!" data-activates="dropdown1">Todos los pines<i class="material-icons right no-padding no-margin">arrow_drop_down</i></a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col m2 s5">
-                    <ul id="nav-mobile" class="left">
-                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Todos los pines<i class="material-icons right">arrow_drop_down</i></a></li>
-                    </ul>
-                </div>
-                <div class="col m3 s5">
-                    <a href="#" class="navbar__profile"><img src="dist/css/img/myAvatar.png" class="circle navbar__avatar">Vanessa</a>
+                <div class="navbar__global-menu col l3 m3 s4">
+                    <a href="#" class="navbar__profile hide-on-small-only"><img src="dist/css/img/myAvatar.png" class="circle navbar__avatar"> Vanessa</a>
+                    <a href="#" class="navbar__menu"><i class="fa fa-bars navbar__bars" aria-hidden="true"></i></a>
+                    <a href="#" class="navbar__menu-notifications">
+                        <i class="fa fa-commenting navbar__message" aria-hidden="true"></i>
+                        <span class="navbar__message-notifications">+9</span>
+                    </a>
                 </div>
             </div>
         </div>
